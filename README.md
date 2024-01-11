@@ -1,4 +1,6 @@
 # pet-boat-rental-service
+Exercise Description
+
 Assignment Title
 Pet-Friendly Boat Rental Service API
 
@@ -38,7 +40,45 @@ General advice for the Candidate when completing the assignment
 
 **********
 
-The below requirements weren't completed yet:
+TESTS
+
+How to test API's through API call
+
+In order to test the requested API's some records should be inserted in database in order to provide some data that will be needed in the API call  
+
+Examples:
+INSERT INTO OWNER VALUES(1, '4351235678', '90210', '123456789', '34', 'teste@petscreening.com', null, 'Jack Allen');
+INSERT INTO OWNER VALUES(2, '2332136678', '54213', '987654321', '21', 'xpto@petscreening.com', null, 'Katie Barger');
+INSERT INTO BREED VALUES(1, 'POODLE');
+INSERT INTO BREED VALUES(2, 'BEAGLE');
+
+How API calls should be done:
+
+Register Pet API
+
+HTTP Method - POST
+URL - http://localhost:8080/v1/boat-rental/pets
+Data Type - raw, JSON
+
+Body Example - {
+"name": "Iron",
+"weight": "20",
+"vaccinationStatus": true,
+"trainingLevel": 3,
+"ownerId": 1,
+"breedId": 2
+}
+
+Get eligible Pet API
+
+HTTP Method - GET
+URL - http://localhost:8080/v1/boat-rental/pets
+Data Type - raw, JSON
+
+
+**********
+
+The below requirements aren't completed yet:
 
 -- include unit tests;
 -- change some things in database(change some column names) and perform corresponding refactor within the code;
